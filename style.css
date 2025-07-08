@@ -222,7 +222,8 @@ label {
 }
 
 .success-container.valid {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 #image-preview {
