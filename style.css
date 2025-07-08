@@ -181,7 +181,7 @@ label {
 .ticket {
   background-image: url(./assets/images/pattern-ticket.svg);
   width: 350px;
-  height: 170px;
+  height: 163px;
   background-size: cover;
 }
 .ticket-left {
@@ -272,5 +272,10 @@ html, body {
     display: grid;
     justify-content: center;
     place-items: center;
+  }
+
+  .ticket {
+    width: 320px;
+    height: 149.03px;
   }
 }
