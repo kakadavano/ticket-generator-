@@ -278,4 +278,8 @@ html, body {
     width: 320px;
     height: 149.03px;
   }
+
+  .success-container {
+    justify-content: center;
+  }
 }
