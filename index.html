@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Frontend Mentor | Conference ticket generator</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"/>
+  <link rel="stylesheet" href="./style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Caveat:wght@400..700&family=Edu+QLD+Hand:wght@400..700&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+  <div id="page" class="container">
+    <div class="top"><img src="./assets/images/logo-full.svg" class="img1"/></div>
+  </div>  
+  
+  <div class="form-container">
+    <div>
+      <h1>Your Journey to Coding Conf<br />2025 Starts Here!</h1>
+      <p class="sub-text">Secure your spot at next year’s biggest coding conference.</p>
+    </div>
+
+    <form class="form" novalidate>
+    
+      <div class="upload">
+        <div>Upload Avatar</div>
+        <div class="drop" id="drop-area">
+          <input type="file" id="avatar-input" accept=".jpg,.jpeg,.png" hidden/>
+          <img src="./assets/images/icon-upload.svg" id="image-preview">
+          <p class="info">Drag and drop or click to upload</p>
+        </div>
+        <span class="error-msg" id="file-error"><img src="./assets/images/icon-info.svg" class="img2"/>File too large. Please upload a photo under 500KB.</span>
+        <div class="info2"><img src="./assets/images/icon-info.svg" class="img2"/>Upload your photo (JPG or PNG, max size: 500KB).</div>
+      </div>
+
+   
+      <div class="name">
+        <label for="name-input">Full Name</label>
+        <input class="input" id="name-input" type="text" required/>
+        <span class="error-msg" id="name-error"></span>
+      </div>
+
+    
+      <div class="email">
+        <label for="email-input">Email Address</label>
+        <input class="input" id="email-input" type="email" placeholder="example@email.com" spellcheck="false" required/>
+        <span class="error-msg" id="email-error">
+          <img src="./assets/images/icon-info.svg" class="img4"/>Please enter a valid email address</span>
+      </div>
+
+    
+      <div class="github">
+        <label for="github-input">GitHub Username</label>
+        <input class="input" id="github-input" type="text" placeholder="@yourusername" required/>
+        <span class="error-msg" id="github-error"></span>
+      </div>
+
+      <button class="submit" type="submit">Generate My Ticket</button>
+    </form>
+  </div>
+
+  <div class="success-container">
+    <div class="message">
+      <h1 class="page2">Congrats, <span id="out-name"></span>!<br/>Your ticket is ready.</h1>
+      <p class="sub2-text">We’ve emailed your ticket to</br> <span id="out-email"></span> and will send updates in</br>the run up to the event.</p>
+    </div>
+
+    <div class="ticket">
+      <div class="ticket-left">
+        <div class="ticket-logo"><img src="./assets/images/logo-full.svg"></div>
+        <div class="ticket-details">Jan 31, 2025 / Austin, TX</div>
+        <div class="ticket-user">
+          <img id="out-avatar" src=""/>
+          <div class="user-info">
+            <div id="out-name-2"></div>
+            <div class="ticket-username" id="out-gh"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ticket-right">
+        <div id="ticket-number"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

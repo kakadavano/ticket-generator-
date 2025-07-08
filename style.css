@@ -1,0 +1,263 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background:
+    url(./assets/images/pattern-circle.svg) no-repeat 1180px 450px,
+    url(./assets/images/pattern-lines.svg) repeat center center,
+    url(./assets/images/pattern-squiggly-line-top.svg) no-repeat top right,
+    url(./assets/images/pattern-squiggly-line-bottom-desktop.svg) no-repeat bottom left,
+    url(./assets/images/background-desktop.png) no-repeat center center;
+  background-size: auto, auto, auto, auto, cover;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Inconsolata", monospace;
+}
+
+.form {
+  width: 350px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.upload {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  gap: 5px;
+}
+
+.name,
+.email,
+.github {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 0.7fr;
+  gap: 5px;
+}
+
+.drop {
+  outline-style: dashed;
+  border-radius: 1ch;
+  outline-width: thin;
+  background-color: hsla(252, 6%, 83%, 0.1);
+  place-items: center;
+  padding-top: 15px;
+  justify-content: center;
+}
+
+.input {
+  border: 1px solid white;
+  border-radius: 1ch;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-weight: 200;
+  font-size: 13px;
+  background-color: hsla(252, 6%, 83%, 0.1);
+  color: white;
+}
+
+.input:hover {
+  background-color: #4D4A64;
+}
+
+.submit {
+  height: 35px;
+  color: #0c0619;
+  background-color: #f96c5d;
+  border-radius: 1ch;
+  font-weight: 700;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+p {
+  text-align: center;
+}
+
+.info {
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.info2 {
+  font-size: 10px;
+  display: flex;
+  align-self: center;
+  font-weight: 200;
+}
+
+.info2.invalid  {
+    display: none;
+}
+
+.img2 {
+  float: left;
+  padding-right: 8px;
+}
+
+.img1 {
+  width: 150px;
+}
+
+.img3 {
+  padding: 3px;
+  background-color: hsla(245, 15%, 58%, 0.1);
+  border-radius: 1ch;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#ticket-number {
+  transform: rotate(90deg);
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Inconsolata", monospace;
+  font-size: 14px;
+}
+
+
+.error-msg {
+  display: none;
+  font-weight: 300;
+  font-size: 10px;
+  color: #f96c5d;
+  margin-top: 4px;
+}
+
+.error-msg.active {
+  display: flex;
+  align-items: center;
+}
+
+.input.invalid {
+  border-color: #f96c5d;
+}
+
+
+.drop.invalid {
+  outline-color: #f96c5d;
+}
+
+.success-container {
+  display: none;
+  width: 500px;
+  place-items: center;
+  padding-top: 40px;
+}
+
+.message {
+  padding-bottom: 50px;
+}
+
+.success-container .message #out-name {
+  color: #f96c5d;
+}
+.success-container .message .sub-text {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.success-container .message #out-email {
+  color: #f96c5d;
+}
+
+.ticket {
+  background-image: url(./assets/images/pattern-ticket.svg);
+  width: 350px;
+  height: 170px;
+  background-size: cover;
+}
+.ticket-left {
+  padding: 20px;
+  flex: 3;
+  color: white;
+}
+
+.ticket-details {
+  padding-left: 47px;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+.ticket-user {
+  display: flex;
+  align-items: center;
+}
+.ticket-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+  background-color: #222;
+}
+.user-info #out-name-2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.ticket-username {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.form-container.invalid {
+  display: none;
+}
+
+.success-container.valid {
+  display: block;
+}
+
+#image-preview {
+  display: flex;
+  background-color: #4D4A64;
+  border-radius: 1ch;
+}
+
+#image-preview:hover {
+  background-color:	#FFFFFF;
+}
+
+.submit:hover {
+  background-color: #D95D4D;
+}
+
+@media (max-width:600px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .form {
+    width: 340px;
+  }
+
+  body {
+    background:
+      url(./assets/images/pattern-circle.svg) no-repeat 350px 500px,
+      url(./assets/images/pattern-lines.svg) no-repeat center center,
+      url(./assets/images/pattern-squiggly-line-top.svg) no-repeat top right,
+      url(./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg) no-repeat bottom left,
+      url(./assets/images/background-mobile.png) no-repeat center center;
+    background-size: 100px, auto, 200px, 450px, cover;
+  }
+
+  .page2 {
+    font-size: 30px;
+  }
+}
