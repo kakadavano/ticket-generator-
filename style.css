@@ -41,6 +41,7 @@ body {
 }
 
 .drop {
+  display: grid;
   outline-style: dashed;
   border-radius: 1ch;
   outline-width: thin;
@@ -265,5 +266,9 @@ html, body {
 
   .page2 {
     font-size: 30px;
+  }
+
+  .drop {
+    justify-content: center;
   }
 }
