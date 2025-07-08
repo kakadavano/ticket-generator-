@@ -46,9 +46,9 @@ body {
   border-radius: 1ch;
   outline-width: thin;
   background-color: hsla(252, 6%, 83%, 0.1);
-  place-items: center;
   padding-top: 15px;
   justify-content: center;
+  place-items: center;
 }
 
 .input {
@@ -269,6 +269,8 @@ html, body {
   }
 
   .drop {
+    display: grid;
     justify-content: center;
+    place-items: center;
   }
 }
